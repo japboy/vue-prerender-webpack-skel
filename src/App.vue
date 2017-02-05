@@ -1,6 +1,6 @@
 <template>
   <!-- Make sure the root component has the same id as the element it's replacing -->
-  <div id="app">
+  <div id="app" server-rendered="true">
     <main>
       <p class="warning">{{ message }}</p>
       <p>{{ counter }}</p>

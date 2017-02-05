@@ -43,7 +43,7 @@ module.exports = [
           loaders: [
             'style-loader',
             'css-loader?modules&importLoaders=1',
-            'postcss-loader'
+            'postcss-loader?sourceMap=inline'
           ]
         },
         {
@@ -73,14 +73,6 @@ module.exports = [
           'vendor',
           'manifest'
         ]
-      }),
-
-      /**
-       * @see https://webpack.js.org/plugins/loader-options-plugin/
-       */
-      new webpack.LoaderOptionsPlugin({
-        debug: env.NODE_ENV !== 'production',
-        minimize: env.NODE_ENV === 'production'
       }),
 
       /**
